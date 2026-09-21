@@ -1,0 +1,718 @@
+/* =========================================================
+   FLEXEN
+   HEADER.CSS
+   Header shell, positioning, scroll states & top bar
+========================================================= */
+
+
+/* =========================================================
+   01. HEADER VARIABLES
+========================================================= */
+
+:root {
+
+    --header-z-index: 1000;
+
+    --header-topbar-height: 30px;
+
+    --header-spacing: 18px;
+    --header-spacing-compact: 10px;
+
+    --header-transition:
+        padding 220ms ease,
+        background-color 220ms ease,
+        box-shadow 220ms ease;
+
+}
+
+
+/* =========================================================
+   02. SITE HEADER
+========================================================= */
+
+.site-header {
+
+    position: relative;
+
+    width: 100%;
+
+    z-index: var(--header-z-index);
+
+    background: transparent;
+
+    color: #0B1F3A;
+
+}
+
+
+/* =========================================================
+   03. HEADER CONTAINER
+========================================================= */
+
+.site-header > .container {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   04. NORMAL HEADER
+========================================================= */
+
+.site-header {
+
+    padding-top: var(--header-spacing);
+
+    padding-bottom: var(--header-spacing);
+
+    transition: var(--header-transition);
+
+}
+
+
+/* =========================================================
+   05. STICKY HEADER
+========================================================= */
+
+.site-header.is-sticky {
+
+    position: sticky;
+
+    top: 0;
+
+}
+
+
+/* =========================================================
+   06. FIXED HEADER
+========================================================= */
+
+.site-header.is-fixed {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   07. SCROLLED HEADER
+========================================================= */
+
+.site-header.is-scrolled {
+
+    padding-top: var(--header-spacing-compact);
+
+    padding-bottom: var(--header-spacing-compact);
+
+}
+
+
+/* =========================================================
+   08. COMPACT HEADER
+========================================================= */
+
+.site-header.is-compact {
+
+    padding-top: var(--header-spacing-compact);
+
+    padding-bottom: var(--header-spacing-compact);
+
+}
+
+
+/* =========================================================
+   09. STANDARD SCROLLED BACKGROUND
+========================================================= */
+
+.site-header.is-scrolled:not(
+    .site-header--transparent
+):not(
+    .site-header--overlay
+) {
+
+    background:
+        rgba(255, 255, 255, 0.98);
+
+}
+
+
+/* =========================================================
+   10. STANDARD SCROLLED SHADOW
+========================================================= */
+
+.site-header.is-scrolled:not(
+    .site-header--transparent
+):not(
+    .site-header--overlay
+) .navbar {
+
+    box-shadow:
+        0 8px 28px rgba(7, 21, 41, 0.09);
+
+}
+
+
+/* =========================================================
+   11. TRANSPARENT HEADER
+========================================================= */
+
+.site-header--transparent {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding-top: var(--header-spacing);
+
+    padding-bottom: var(--header-spacing);
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   12. OVERLAY HEADER
+========================================================= */
+
+.site-header--overlay {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding-top: var(--header-spacing);
+
+    padding-bottom: var(--header-spacing);
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   13. TRANSPARENT / OVERLAY NAVBAR
+========================================================= */
+
+.site-header--transparent .navbar,
+.site-header--overlay .navbar {
+
+    background:
+        rgba(7, 21, 41, 0.28);
+
+    border-color:
+        rgba(255, 255, 255, 0.18);
+
+    box-shadow: none;
+
+}
+
+
+/* =========================================================
+   14. TRANSPARENT HEADER — SCROLLED
+========================================================= */
+
+.site-header--transparent.is-scrolled,
+.site-header--overlay.is-scrolled {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    padding-top: var(--header-spacing-compact);
+
+    padding-bottom: var(--header-spacing-compact);
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   15. TRANSPARENT → SOLID
+========================================================= */
+
+.site-header--transparent.is-scrolled .navbar,
+.site-header--overlay.is-scrolled .navbar {
+
+    background:
+        rgba(255, 255, 255, 0.98);
+
+    border-color:
+        rgba(11, 31, 58, 0.07);
+
+    box-shadow:
+        0 8px 28px rgba(7, 21, 41, 0.09);
+
+}
+
+
+/* =========================================================
+   16. DARK HEADER
+========================================================= */
+
+.site-header--dark {
+
+    background:
+        #071529;
+
+    color:
+        #FFFFFF;
+
+}
+
+
+/* =========================================================
+   17. DARK HEADER NAVBAR
+========================================================= */
+
+.site-header--dark .navbar {
+
+    background:
+        #0B1F3A;
+
+    border-color:
+        rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.14);
+
+}
+
+
+/* =========================================================
+   18. DARK HEADER — SCROLLED
+========================================================= */
+
+.site-header--dark.is-scrolled {
+
+    background:
+        #071529;
+
+}
+
+
+/* =========================================================
+   19. DARK + TRANSPARENT
+========================================================= */
+
+.site-header--dark.site-header--transparent {
+
+    background:
+        transparent;
+
+}
+
+
+.site-header--dark.site-header--transparent .navbar {
+
+    background:
+        rgba(7, 21, 41, 0.42);
+
+    border-color:
+        rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        none;
+
+}
+
+
+/* =========================================================
+   20. TOP BAR
+========================================================= */
+
+.site-header__topbar {
+
+    width: 100%;
+
+    min-height:
+        var(--header-topbar-height);
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        #EAF2F9;
+
+    border-bottom:
+        1px solid rgba(11, 31, 58, 0.06);
+
+    color:
+        #0B1F3A;
+
+}
+
+
+/* =========================================================
+   21. TOP BAR INNER
+========================================================= */
+
+.site-header__topbar-inner {
+
+    width: 100%;
+
+    min-height:
+        var(--header-topbar-height);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+/* =========================================================
+   22. TOP BAR LEFT
+========================================================= */
+
+.site-header__topbar-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-width: 0;
+
+}
+
+
+/* =========================================================
+   23. TOP BAR RIGHT
+========================================================= */
+
+.site-header__topbar-right {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    min-width: 0;
+
+}
+
+
+/* =========================================================
+   24. TOP BAR ITEMS
+========================================================= */
+
+.site-header__topbar a,
+.site-header__topbar span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    color:
+        #0B1F3A;
+
+    font-family:
+        inherit;
+
+    font-size:
+        11px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1;
+
+    white-space:
+        nowrap;
+
+    text-decoration:
+        none;
+
+}
+
+
+/* =========================================================
+   25. TOP BAR LINKS
+========================================================= */
+
+.site-header__topbar a {
+
+    transition:
+        color 180ms ease;
+
+}
+
+
+.site-header__topbar a:hover {
+
+    color:
+        #078EF0;
+
+}
+
+
+/* =========================================================
+   26. TOP BAR DIVIDER
+========================================================= */
+
+.site-header__topbar-divider {
+
+    width: 1px;
+
+    height: 14px;
+
+    flex: 0 0 1px;
+
+    background:
+        rgba(11, 31, 58, 0.20);
+
+}
+
+
+/* =========================================================
+   27. TOP BAR ICON
+========================================================= */
+
+.site-header__topbar svg {
+
+    width: 13px;
+
+    height: 13px;
+
+    flex: 0 0 13px;
+
+}
+
+
+/* =========================================================
+   28. HEADER WITH TOP BAR
+========================================================= */
+
+.site-header--with-topbar {
+
+    padding-top: 0;
+
+    padding-bottom: var(--header-spacing);
+
+}
+
+
+/* =========================================================
+   29. HEADER WITH TOP BAR — SCROLL
+========================================================= */
+
+.site-header--with-topbar.is-scrolled {
+
+    padding-top: 0;
+
+    padding-bottom: var(--header-spacing-compact);
+
+}
+
+
+/* =========================================================
+   30. HEADER BACKDROP
+========================================================= */
+
+.site-header.has-backdrop {
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+}
+
+
+/* =========================================================
+   31. HEADER OVER HERO
+========================================================= */
+
+.site-header--hero {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   32. HERO HEADER — SCROLLED
+========================================================= */
+
+.site-header--hero.is-scrolled {
+
+    position: fixed;
+
+    background: transparent;
+
+}
+
+
+/* =========================================================
+   33. HEADER CONTENT OVERLAY
+========================================================= */
+
+.site-header--hero:not(.is-scrolled) .navbar {
+
+    box-shadow: none;
+
+}
+
+
+/* =========================================================
+   34. MOBILE HEADER
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .site-header {
+
+        padding-top: 0;
+
+        padding-bottom: 0;
+
+    }
+
+
+    .site-header.is-scrolled {
+
+        padding-top: 0;
+
+        padding-bottom: 0;
+
+    }
+
+
+    .site-header.is-compact {
+
+        padding-top: 0;
+
+        padding-bottom: 0;
+
+    }
+
+
+    .site-header--transparent,
+    .site-header--overlay,
+    .site-header--hero {
+
+        padding-top: 0;
+
+        padding-bottom: 0;
+
+    }
+
+
+    .site-header--transparent.is-scrolled,
+    .site-header--overlay.is-scrolled,
+    .site-header--hero.is-scrolled {
+
+        padding-top: 0;
+
+        padding-bottom: 0;
+
+    }
+
+
+    .site-header__topbar {
+
+        display: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   35. MOBILE TRANSPARENT NAVBAR
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .site-header--transparent .navbar,
+    .site-header--overlay .navbar,
+    .site-header--hero .navbar {
+
+        border-radius: 0;
+
+    }
+
+
+    .site-header--transparent.is-scrolled .navbar,
+    .site-header--overlay.is-scrolled .navbar,
+    .site-header--hero.is-scrolled .navbar {
+
+        box-shadow:
+            0 7px 22px rgba(7, 21, 41, 0.10);
+
+    }
+
+}
+
+
+/* =========================================================
+   36. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .site-header--transparent,
+    .site-header--overlay,
+    .site-header--hero {
+
+        padding: 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   37. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .site-header,
+    .site-header * {
+
+        transition: none !important;
+
+    }
+
+}

@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- =========================================================
+       BASIC DOCUMENT SETTINGS
+  ========================================================== -->
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  >
+
+
+  <!-- =========================================================
+       SEO
+  ========================================================== -->
+
+  <title>
+    404 Page Not Found | FLEXEN
+  </title>
+
+  <meta
+    name="description"
+    content="The page you are looking for could not be found. Return to FLEXEN and explore our sourcing, procurement, logistics and supplier services."
+  >
+
+  <meta
+    name="robots"
+    content="noindex, nofollow"
+  >
+
+  <meta
+    name="author"
+    content="FLEXEN"
+  >
+
+
+  <!-- =========================================================
+       FAVICON
+  ========================================================== -->
+
+  <link
+    rel="icon"
+    href="./assets/images/brand/favicon.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="manifest"
+    href="./site.webmanifest"
+  >
+
+
+  <!-- =========================================================
+       CORE CSS
+  ========================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/base/reset.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/base/variables.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/base/typography.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/base/accessibility.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/layout/container.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/layout/grid.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/layout/flex.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/layout/sections.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/layout/spacing.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/layout/responsive.css"
+  >
+
+
+  <!-- =========================================================
+       COMPONENT CSS
+  ========================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/components/header.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/components/navbar.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/components/mobile-menu.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/components/buttons.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/components/footer.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/components/cookie-banner.css"
+  >
+
+
+  <!-- =========================================================
+       PAGE CSS
+  ========================================================== -->
+
+  <link
+    rel="stylesheet"
+    href="./assets/css/pages/legal.css"
+  >
+
+
+  <!-- =========================================================
+       404 PAGE STYLES
+  ========================================================== -->
+
+  <style>
+
+    /* ========================================================
+       ERROR PAGE FOUNDATION
+    ========================================================= */
+
+    .error-page {
+
+      min-height: 100vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      background: #f7f9fc;
+
+    }
+
+
+    /* ========================================================
+       MAIN
+    ========================================================= */
+
+    .error-page__main {
+
+      flex: 1;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 80px 20px;
+
+    }
+
+
+    /* ========================================================
+       CONTENT
+    ========================================================= */
+
+    .error-page__content {
+
+      width: 100%;
+
+      max-width: 780px;
+
+      margin: 0 auto;
+
+      text-align: center;
+
+    }
+
+
+    /* ========================================================
+       ERROR CODE
+    ========================================================= */
+
+    .error-page__code {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      min-width: 110px;
+
+      min-height: 48px;
+
+      padding: 10px 22px;
+
+      margin-bottom: 28px;
+
+      border: 1px solid rgba(11, 31, 58, 0.12);
+
+      border-radius: 999px;
+
+      background: #ffffff;
+
+      color: #f47b20;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.14em;
+
+    }
+
+
+    /* ========================================================
+       ERROR ICON
+    ========================================================= */
+
+    .error-page__icon {
+
+      width: 120px;
+
+      height: 120px;
+
+      margin: 0 auto 30px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 32px;
+
+      background: #0b1f3a;
+
+      color: #ffffff;
+
+      font-size: 42px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 20px 50px rgba(7, 21, 41, 0.16);
+
+    }
+
+
+    /* ========================================================
+       HEADING
+    ========================================================= */
+
+    .error-page h1 {
+
+      margin: 0 0 20px;
+
+      color: #071529;
+
+      font-size: clamp(38px, 6vw, 68px);
+
+      line-height: 1.05;
+
+      letter-spacing: -0.045em;
+
+    }
+
+
+    /* ========================================================
+       DESCRIPTION
+    ========================================================= */
+
+    .error-page__lead {
+
+      max-width: 640px;
+
+      margin: 0 auto 34px;
+
+      color: #5f6b7a;
+
+      font-size: 18px;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* ========================================================
+       ACTIONS
+    ========================================================= */
+
+    .error-page__actions {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 14px;
+
+      margin-bottom: 55px;
+
+    }
+
+
+    /* ========================================================
+       QUICK LINKS
+    ========================================================= */
+
+    .error-page__links {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 10px 26px;
+
+      padding-top: 28px;
+
+      border-top:
+        1px solid rgba(11, 31, 58, 0.10);
+
+    }
+
+
+    .error-page__links a {
+
+      color: #0b1f3a;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      text-decoration: none;
+
+      transition:
+        color 0.2s ease;
+
+    }
+
+
+    .error-page__links a:hover {
+
+      color: #f47b20;
+
+    }
+
+
+    /* ========================================================
+       SUPPORT NOTE
+    ========================================================= */
+
+    .error-page__note {
+
+      margin-top: 30px;
+
+      color: #7a8594;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+    }
+
+
+    /* ========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 640px) {
+
+      .error-page__main {
+
+        padding:
+          60px 18px;
+
+      }
+
+
+      .error-page__icon {
+
+        width: 92px;
+
+        height: 92px;
+
+        border-radius: 26px;
+
+        font-size: 34px;
+
+      }
+
+
+      .error-page__lead {
+
+        font-size: 16px;
+
+      }
+
+
+      .error-page__actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+      }
+
+
+      .error-page__actions .btn {
+
+        width: 100%;
+
+      }
+
+
+      .error-page__links {
+
+        gap: 14px 20px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body class="error-page">
+
+
+  <!-- =========================================================
+       SKIP LINK
+  ========================================================== -->
+
+  <a
+    href="#main-content"
+    class="skip-link"
+  >
+    Skip to main content
+  </a>
+
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+  <header
+    class="site-header"
+    id="site-header"
+  >
+
+    <div class="container">
+
+      <nav
+        class="navbar"
+        aria-label="Main navigation"
+      >
+
+
+        <!-- ===================================================
+             LOGO
+        ==================================================== -->
+
+        <a
+          href="./"
+          class="navbar__logo"
+          aria-label="FLEXEN Home"
+        >
+
+          <img
+            src="./assets/images/brand/logo.svg"
+            alt="FLEXEN"
+            width="150"
+            height="auto"
+          >
+
+        </a>
+
+
+        <!-- ===================================================
+             DESKTOP NAVIGATION
+        ==================================================== -->
+
+        <div class="navbar__menu">
+
+
+          <a href="./">
+            Home
+          </a>
+
+
+          <a href="./pages/about/">
+            About
+          </a>
+
+
+          <!-- SERVICES -->
+
+          <div class="nav-dropdown">
+
+            <button
+              type="button"
+              class="nav-dropdown__toggle"
+              aria-expanded="false"
+            >
+
+              Services
+
+              <span aria-hidden="true">
+                ▾
+              </span>
+
+            </button>
+
+
+            <div class="nav-dropdown__menu">
+
+              <a href="./pages/services/">
+                All Services
+              </a>
+
+              <a href="./pages/services/supplier-matching/">
+                Supplier Matching
+              </a>
+
+              <a href="./pages/services/price-negotiation/">
+                Price Negotiation
+              </a>
+
+              <a href="./pages/services/payment-facilitation/">
+                Payment Facilitation
+              </a>
+
+              <a href="./pages/services/shipping-logistics/">
+                Shipping &amp; Logistics
+              </a>
+
+              <a href="./pages/services/port-clearing/">
+                Port Clearing
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- MARKETS -->
+
+          <div class="nav-dropdown">
+
+            <button
+              type="button"
+              class="nav-dropdown__toggle"
+              aria-expanded="false"
+            >
+
+              Markets
+
+              <span aria-hidden="true">
+                ▾
+              </span>
+
+            </button>
+
+
+            <div class="nav-dropdown__menu">
+
+              <a href="./pages/markets/">
+                All Markets
+              </a>
+
+              <a href="./pages/markets/china/">
+                China
+              </a>
+
+              <a href="./pages/markets/turkey/">
+                Turkey
+              </a>
+
+              <a href="./pages/markets/middle-east/">
+                Middle East
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <a href="./pages/how-it-works/">
+            How It Works
+          </a>
+
+
+          <a href="./pages/products/">
+            Products
+          </a>
+
+
+          <a href="./pages/suppliers/">
+            Suppliers
+          </a>
+
+
+          <a href="./blog/">
+            Resources
+          </a>
+
+        </div>
+
+
+        <!-- ===================================================
+             HEADER CTA
+        ==================================================== -->
+
+        <div class="navbar__actions">
+
+          <a
+            href="./pages/get-a-quote/"
+            class="btn btn--primary"
+          >
+            Get a Quote
+          </a>
+
+        </div>
+
+
+        <!-- ===================================================
+             MOBILE MENU BUTTON
+        ==================================================== -->
+
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+        >
+
+          <span></span>
+
+          <span></span>
+
+          <span></span>
+
+        </button>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================================
+       MOBILE NAVIGATION
+  ========================================================== -->
+
+  <div
+    class="mobile-navigation"
+    id="mobile-navigation"
+    aria-hidden="true"
+  >
+
+    <div class="mobile-navigation__inner">
+
+
+      <a href="./">
+        Home
+      </a>
+
+
+      <a href="./pages/about/">
+        About
+      </a>
+
+
+      <!-- SERVICES -->
+
+      <div class="mobile-navigation__group">
+
+        <span class="mobile-navigation__label">
+          Services
+        </span>
+
+
+        <a href="./pages/services/">
+          All Services
+        </a>
+
+
+        <a href="./pages/services/supplier-matching/">
+          Supplier Matching
+        </a>
+
+
+        <a href="./pages/services/price-negotiation/">
+          Price Negotiation
+        </a>
+
+
+        <a href="./pages/services/payment-facilitation/">
+          Payment Facilitation
+        </a>
+
+
+        <a href="./pages/services/shipping-logistics/">
+          Shipping &amp; Logistics
+        </a>
+
+
+        <a href="./pages/services/port-clearing/">
+          Port Clearing
+        </a>
+
+      </div>
+
+
+      <!-- MARKETS -->
+
+      <div class="mobile-navigation__group">
+
+        <span class="mobile-navigation__label">
+          Markets
+        </span>
+
+
+        <a href="./pages/markets/">
+          All Markets
+        </a>
+
+
+        <a href="./pages/markets/china/">
+          China
+        </a>
+
+
+        <a href="./pages/markets/turkey/">
+          Turkey
+        </a>
+
+
+        <a href="./pages/markets/middle-east/">
+          Middle East
+        </a>
+
+      </div>
+
+
+      <a href="./pages/how-it-works/">
+        How It Works
+      </a>
+
+
+      <a href="./pages/products/">
+        Products
+      </a>
+
+
+      <a href="./pages/suppliers/">
+        Suppliers
+      </a>
+
+
+      <a href="./blog/">
+        Resources
+      </a>
+
+
+      <a href="./pages/contact/">
+        Contact
+      </a>
+
+
+      <a href="./pages/faqs/">
+        FAQs
+      </a>
+
+
+      <a
+        href="./pages/get-a-quote/"
+        class="btn btn--primary"
+      >
+        Get a Quote
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       MAIN 404 CONTENT
+  ========================================================== -->
+
+  <main
+    id="main-content"
+    class="error-page__main"
+  >
+
+    <div class="container">
+
+      <div class="error-page__content">
+
+
+        <!-- ===================================================
+             ERROR CODE
+        ==================================================== -->
+
+        <div
+          class="error-page__code"
+          aria-label="HTTP Error 404"
+        >
+          ERROR 404
+        </div>
+
+
+        <!-- ===================================================
+             ERROR ICON
+        ==================================================== -->
+
+        <div
+          class="error-page__icon"
+          aria-hidden="true"
+        >
+          404
+        </div>
+
+
+        <!-- ===================================================
+             MAIN HEADING
+        ==================================================== -->
+
+        <h1>
+          Page Not Found
+        </h1>
+
+
+        <!-- ===================================================
+             DESCRIPTION
+        ==================================================== -->
+
+        <p class="error-page__lead">
+
+          The page you are looking for may have been moved,
+          renamed, removed, or the link may no longer be available.
+
+          Let us help you get back to the right place.
+
+        </p>
+
+
+        <!-- ===================================================
+             PRIMARY ACTIONS
+        ==================================================== -->
+
+        <div class="error-page__actions">
+
+
+          <a
+            href="./"
+            class="btn btn--primary"
+          >
+            Return Home
+          </a>
+
+
+          <a
+            href="./pages/get-a-quote/"
+            class="btn btn--secondary"
+          >
+            Get a Quote
+          </a>
+
+
+          <a
+            href="./pages/contact/"
+            class="btn btn--secondary"
+          >
+            Contact FLEXEN
+          </a>
+
+        </div>
+
+
+        <!-- ===================================================
+             QUICK NAVIGATION
+        ==================================================== -->
+
+        <div class="error-page__links">
+
+
+          <a href="./pages/services/">
+            Services
+          </a>
+
+
+          <a href="./pages/markets/">
+            Markets
+          </a>
+
+
+          <a href="./pages/products/">
+            Products
+          </a>
+
+
+          <a href="./pages/suppliers/">
+            Suppliers
+          </a>
+
+
+          <a href="./pages/how-it-works/">
+            How It Works
+          </a>
+
+
+          <a href="./blog/">
+            Resources
+          </a>
+
+
+          <a href="./pages/faqs/">
+            FAQs
+          </a>
+
+        </div>
+
+
+        <!-- ===================================================
+             SUPPORT NOTE
+        ==================================================== -->
+
+        <p class="error-page__note">
+
+          Looking for something specific?
+
+          <a href="./pages/contact/">
+            Contact our team
+          </a>
+
+          and we will help you find the right information.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+
+      <div class="footer-grid">
+
+
+        <!-- ===================================================
+             BRAND
+        ==================================================== -->
+
+        <div class="footer-column footer-column--brand">
+
+
+          <a
+            href="./"
+            class="footer-logo"
+          >
+
+            <img
+              src="./assets/images/brand/logo-light.svg"
+              alt="FLEXEN"
+              width="150"
+              height="auto"
+            >
+
+          </a>
+
+
+          <p>
+
+            Connecting businesses to international suppliers
+            and helping simplify sourcing, procurement and logistics.
+
+          </p>
+
+        </div>
+
+
+        <!-- ===================================================
+             COMPANY
+        ==================================================== -->
+
+        <div class="footer-column">
+
+
+          <h3>
+            Company
+          </h3>
+
+
+          <a href="./pages/about/">
+            About
+          </a>
+
+
+          <a href="./pages/how-it-works/">
+            How It Works
+          </a>
+
+
+          <a href="./pages/suppliers/">
+            Suppliers
+          </a>
+
+
+          <a href="./pages/contact/">
+            Contact
+          </a>
+
+
+          <a href="./pages/faqs/">
+            FAQs
+          </a>
+
+        </div>
+
+
+        <!-- ===================================================
+             SERVICES
+        ==================================================== -->
+
+        <div class="footer-column">
+
+
+          <h3>
+            Services
+          </h3>
+
+
+          <a href="./pages/services/supplier-matching/">
+            Supplier Matching
+          </a>
+
+
+          <a href="./pages/services/price-negotiation/">
+            Price Negotiation
+          </a>
+
+
+          <a href="./pages/services/payment-facilitation/">
+            Payment Facilitation
+          </a>
+
+
+          <a href="./pages/services/shipping-logistics/">
+            Shipping &amp; Logistics
+          </a>
+
+
+          <a href="./pages/services/port-clearing/">
+            Port Clearing
+          </a>
+
+        </div>
+
+
+        <!-- ===================================================
+             MARKETS
+        ==================================================== -->
+
+        <div class="footer-column">
+
+
+          <h3>
+            Markets
+          </h3>
+
+
+          <a href="./pages/markets/china/">
+            China
+          </a>
+
+
+          <a href="./pages/markets/turkey/">
+            Turkey
+          </a>
+
+
+          <a href="./pages/markets/middle-east/">
+            Middle East
+          </a>
+
+        </div>
+
+
+        <!-- ===================================================
+             PRODUCTS
+        ==================================================== -->
+
+        <div class="footer-column">
+
+
+          <h3>
+            Products
+          </h3>
+
+
+          <a href="./pages/products/machinery/">
+            Machinery
+          </a>
+
+
+          <a href="./pages/products/construction-materials/">
+            Construction Materials
+          </a>
+
+
+          <a href="./pages/products/automotive/">
+            Automotive
+          </a>
+
+
+          <a href="./pages/products/electronics/">
+            Electronics
+          </a>
+
+
+          <a href="./pages/products/furniture/">
+            Furniture
+          </a>
+
+
+          <a href="./pages/products/packaging/">
+            Packaging
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           FOOTER BOTTOM
+      ====================================================== -->
+
+      <div class="footer-bottom">
+
+
+        <p>
+
+          &copy;
+
+          <span id="current-year"></span>
+
+          FLEXEN.
+
+          All rights reserved.
+
+        </p>
+
+
+        <div class="footer-legal">
+
+
+          <a href="./legal/privacy-policy/">
+            Privacy Policy
+          </a>
+
+
+          <a href="./legal/terms-of-service/">
+            Terms of Service
+          </a>
+
+
+          <a href="./legal/cookie-policy/">
+            Cookie Policy
+          </a>
+
+
+          <a href="./legal/disclaimer/">
+            Disclaimer
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       WHATSAPP BUTTON
+  ========================================================== -->
+
+  <a
+    href="#"
+    class="whatsapp-button"
+    aria-label="Contact FLEXEN on WhatsApp"
+  >
+
+    <span aria-hidden="true">
+      WhatsApp
+    </span>
+
+  </a>
+
+
+  <!-- =========================================================
+       COOKIE BANNER
+  ========================================================== -->
+
+  <div
+    class="cookie-banner"
+    id="cookie-banner"
+    role="dialog"
+    aria-label="Cookie notice"
+    aria-hidden="true"
+  >
+
+    <div class="cookie-banner__content">
+
+
+      <p>
+
+        We use cookies to improve website functionality
+        and user experience.
+
+        You can learn more in our
+
+        <a href="./legal/cookie-policy/">
+          Cookie Policy
+        </a>.
+
+      </p>
+
+
+      <div class="cookie-banner__actions">
+
+
+        <button
+          type="button"
+          class="btn btn--primary"
+          data-cookie-accept
+        >
+          Accept
+        </button>
+
+
+        <button
+          type="button"
+          class="btn btn--secondary"
+          data-cookie-dismiss
+        >
+          Dismiss
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script src="./assets/js/core/config.js"></script>
+
+  <script src="./assets/js/core/navigation.js"></script>
+
+  <script src="./assets/js/core/theme.js"></script>
+
+  <script src="./assets/js/core/accessibility.js"></script>
+
+  <script src="./assets/js/core/lazy-loading.js"></script>
+
+  <script src="./assets/js/core/utilities.js"></script>
+
+
+  <!-- COMPONENTS -->
+
+  <script src="./assets/js/components/mobile-menu.js"></script>
+
+  <script src="./assets/js/components/dropdown.js"></script>
+
+  <script src="./assets/js/components/scroll.js"></script>
+
+  <script src="./assets/js/components/sticky-header.js"></script>
+
+
+  <!-- =========================================================
+       CURRENT YEAR
+  ========================================================== -->
+
+  <script>
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+        const yearElement =
+          document.getElementById("current-year");
+
+        if (yearElement) {
+
+          yearElement.textContent =
+            new Date().getFullYear();
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2163 @@
+/* =========================================================
+   FLEXEN
+   BUTTON DESIGN SYSTEM
+   Corporate • Professional • Modern • Conversion Focused
+========================================================= */
+
+
+/* =========================================================
+   01. DESIGN TOKENS
+========================================================= */
+
+:root {
+
+    /* -----------------------------------------------------
+       BRAND COLORS
+    ----------------------------------------------------- */
+
+    --button-navy:
+        #0B2D6B;
+
+    --button-navy-dark:
+        #071F4D;
+
+    --button-navy-hover:
+        #08265C;
+
+    --button-blue:
+        #0EA5FF;
+
+    --button-blue-hover:
+        #078FE5;
+
+    --button-blue-active:
+        #057CC9;
+
+    --button-white:
+        #FFFFFF;
+
+    --button-gray:
+        #E5EAF2;
+
+    --button-gray-dark:
+        #CBD5E1;
+
+    --button-text:
+        #0B2D6B;
+
+    --button-muted:
+        #64748B;
+
+
+    /* -----------------------------------------------------
+       SOFT SURFACES
+    ----------------------------------------------------- */
+
+    --button-soft-blue:
+        #EAF5FF;
+
+    --button-soft-blue-hover:
+        #DCEFFF;
+
+    --button-soft-navy:
+        #E8EEF8;
+
+
+    /* -----------------------------------------------------
+       BORDERS
+    ----------------------------------------------------- */
+
+    --button-border:
+        #0EA5FF;
+
+    --button-border-muted:
+        #CBD8E8;
+
+
+    /* -----------------------------------------------------
+       RADIUS
+    ----------------------------------------------------- */
+
+    --button-radius:
+        6px;
+
+    --button-radius-soft:
+        12px;
+
+    --button-radius-pill:
+        999px;
+
+    --button-radius-circle:
+        50%;
+
+
+    /* -----------------------------------------------------
+       HEIGHTS
+    ----------------------------------------------------- */
+
+    --button-height-large:
+        50px;
+
+    --button-height-medium:
+        44px;
+
+    --button-height-small:
+        36px;
+
+
+    /* -----------------------------------------------------
+       PADDING
+    ----------------------------------------------------- */
+
+    --button-padding-large:
+        0 24px;
+
+    --button-padding-medium:
+        0 20px;
+
+    --button-padding-small:
+        0 16px;
+
+
+    /* -----------------------------------------------------
+       TYPOGRAPHY
+    ----------------------------------------------------- */
+
+    --button-font-size-large:
+        14px;
+
+    --button-font-size-medium:
+        13px;
+
+    --button-font-size-small:
+        12px;
+
+    --button-font-weight:
+        700;
+
+
+    /* -----------------------------------------------------
+       TRANSITION
+    ----------------------------------------------------- */
+
+    --button-transition:
+        180ms ease;
+
+
+    /* -----------------------------------------------------
+       SHADOWS
+    ----------------------------------------------------- */
+
+    --button-shadow-blue:
+        0 7px 18px rgba(14, 165, 255, 0.18);
+
+    --button-shadow-blue-hover:
+        0 10px 24px rgba(14, 165, 255, 0.26);
+
+    --button-shadow-navy:
+        0 7px 18px rgba(11, 45, 107, 0.16);
+
+}
+
+
+/* =========================================================
+   02. BASE BUTTON
+========================================================= */
+
+.btn {
+
+    position: relative;
+
+    min-height:
+        var(--button-height-medium);
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding:
+        var(--button-padding-medium);
+
+    border:
+        1px solid transparent;
+
+    border-radius:
+        var(--button-radius);
+
+    background:
+        transparent;
+
+    color:
+        var(--button-text);
+
+    font-family:
+        inherit;
+
+    font-size:
+        var(--button-font-size-medium);
+
+    font-weight:
+        var(--button-font-weight);
+
+    line-height:
+        1;
+
+    text-align:
+        center;
+
+    text-decoration:
+        none;
+
+    white-space:
+        nowrap;
+
+    cursor:
+        pointer;
+
+    user-select:
+        none;
+
+    vertical-align:
+        middle;
+
+    transition:
+        background-color var(--button-transition),
+        border-color var(--button-transition),
+        color var(--button-transition),
+        transform var(--button-transition),
+        box-shadow var(--button-transition),
+        opacity var(--button-transition);
+
+}
+
+
+/* =========================================================
+   03. BUTTON RESET
+========================================================= */
+
+button.btn {
+
+    appearance:
+        none;
+
+    -webkit-appearance:
+        none;
+
+}
+
+
+/* =========================================================
+   04. BUTTON INNER CONTENT
+========================================================= */
+
+.btn > span {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+/* =========================================================
+   05. PRIMARY CTA
+   Reference: Button 01
+========================================================= */
+
+.btn--primary {
+
+    background:
+        var(--button-blue);
+
+    color:
+        var(--button-white);
+
+    border-color:
+        var(--button-blue);
+
+    box-shadow:
+        var(--button-shadow-blue);
+
+}
+
+
+.btn--primary:hover {
+
+    background:
+        var(--button-blue-hover);
+
+    border-color:
+        var(--button-blue-hover);
+
+    color:
+        var(--button-white);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        var(--button-shadow-blue-hover);
+
+}
+
+
+.btn--primary:active {
+
+    background:
+        var(--button-blue-active);
+
+    border-color:
+        var(--button-blue-active);
+
+    transform:
+        translateY(0);
+
+    box-shadow:
+        var(--button-shadow-blue);
+
+}
+
+
+/* =========================================================
+   06. NAVBAR PRIMARY CTA
+========================================================= */
+
+.nav-cta {
+
+    min-height:
+        44px;
+
+    padding:
+        0 20px;
+
+    border-radius:
+        6px;
+
+}
+
+
+/* =========================================================
+   07. PRIMARY CTA ARROW
+========================================================= */
+
+.btn--primary .btn__arrow,
+.btn--primary::after {
+
+    transition:
+        transform var(--button-transition);
+
+}
+
+
+.btn--primary:hover .btn__arrow {
+
+    transform:
+        translateX(4px);
+
+}
+
+
+/* =========================================================
+   08. NAVY PRIMARY
+   Reference: Button 02
+========================================================= */
+
+.btn--navy {
+
+    background:
+        var(--button-navy);
+
+    border-color:
+        var(--button-navy);
+
+    color:
+        var(--button-white);
+
+    box-shadow:
+        var(--button-shadow-navy);
+
+}
+
+
+.btn--navy:hover {
+
+    background:
+        var(--button-navy-hover);
+
+    border-color:
+        var(--button-navy-hover);
+
+    color:
+        var(--button-white);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 10px 24px rgba(11, 45, 107, 0.22);
+
+}
+
+
+.btn--navy:active {
+
+    background:
+        var(--button-navy-dark);
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   09. BRIGHT BLUE PRIMARY
+   Reference: Button 03
+========================================================= */
+
+.btn--blue {
+
+    background:
+        var(--button-blue);
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        var(--button-white);
+
+    box-shadow:
+        var(--button-shadow-blue);
+
+}
+
+
+.btn--blue:hover {
+
+    background:
+        var(--button-blue-hover);
+
+    border-color:
+        var(--button-blue-hover);
+
+    color:
+        var(--button-white);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        var(--button-shadow-blue-hover);
+
+}
+
+
+/* =========================================================
+   10. OUTLINE BUTTON
+   Reference: Button 04
+========================================================= */
+
+.btn--outline {
+
+    background:
+        transparent;
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        var(--button-navy);
+
+    box-shadow:
+        none;
+
+}
+
+
+.btn--outline:hover {
+
+    background:
+        var(--button-soft-blue);
+
+    border-color:
+        var(--button-blue-hover);
+
+    color:
+        var(--button-blue-hover);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.btn--outline:active {
+
+    background:
+        var(--button-soft-blue-hover);
+
+}
+
+
+/* =========================================================
+   11. GHOST BUTTON
+   Reference: Button 05
+========================================================= */
+
+.btn--ghost {
+
+    background:
+        transparent;
+
+    border-color:
+        transparent;
+
+    color:
+        var(--button-navy);
+
+    box-shadow:
+        none;
+
+}
+
+
+.btn--ghost:hover {
+
+    color:
+        var(--button-blue);
+
+    background:
+        rgba(14, 165, 255, 0.06);
+
+}
+
+
+/* =========================================================
+   12. TEXT + ARROW
+   Reference: Button 06
+========================================================= */
+
+.btn--text {
+
+    min-height:
+        auto;
+
+    padding:
+        8px 0;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--button-navy);
+
+    box-shadow:
+        none;
+
+}
+
+
+.btn--text:hover {
+
+    color:
+        var(--button-blue);
+
+}
+
+
+.btn--text .btn__arrow {
+
+    font-size:
+        22px;
+
+    font-weight:
+        400;
+
+    transition:
+        transform var(--button-transition);
+
+}
+
+
+.btn--text:hover .btn__arrow {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   13. PILL BUTTON
+   Reference: Button 07
+========================================================= */
+
+.btn--pill {
+
+    min-height:
+        48px;
+
+    padding:
+        0 28px;
+
+    border-radius:
+        var(--button-radius-pill);
+
+    background:
+        var(--button-blue);
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        var(--button-white);
+
+}
+
+
+.btn--pill:hover {
+
+    background:
+        var(--button-blue-hover);
+
+    border-color:
+        var(--button-blue-hover);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        var(--button-shadow-blue-hover);
+
+}
+
+
+/* =========================================================
+   14. SOFT-RADIUS BUTTON
+   Reference: Button 08
+========================================================= */
+
+.btn--soft {
+
+    background:
+        var(--button-soft-blue);
+
+    border-color:
+        var(--button-soft-blue);
+
+    color:
+        var(--button-navy);
+
+    border-radius:
+        var(--button-radius-soft);
+
+}
+
+
+.btn--soft:hover {
+
+    background:
+        var(--button-soft-blue-hover);
+
+    border-color:
+        var(--button-soft-blue-hover);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   15. SQUARE BUTTON
+   Reference: Button 09
+========================================================= */
+
+.btn--square {
+
+    border-radius:
+        4px;
+
+    background:
+        var(--button-navy);
+
+    border-color:
+        var(--button-navy);
+
+    color:
+        var(--button-white);
+
+}
+
+
+.btn--square:hover {
+
+    background:
+        var(--button-navy-hover);
+
+    border-color:
+        var(--button-navy-hover);
+
+}
+
+
+/* =========================================================
+   16. SPLIT BUTTON
+   Reference: Button 10
+========================================================= */
+
+.btn--split {
+
+    padding:
+        0;
+
+    overflow:
+        hidden;
+
+    background:
+        var(--button-navy);
+
+    border:
+        1px solid var(--button-navy);
+
+    color:
+        var(--button-white);
+
+}
+
+
+.btn--split__main {
+
+    min-height:
+        var(--button-height-medium);
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        0 20px;
+
+}
+
+
+.btn--split__arrow {
+
+    width:
+        46px;
+
+    height:
+        100%;
+
+    min-height:
+        var(--button-height-medium);
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-left:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    background:
+        var(--button-blue);
+
+    color:
+        var(--button-white);
+
+    transition:
+        background-color var(--button-transition);
+
+}
+
+
+.btn--split:hover {
+
+    background:
+        var(--button-navy-hover);
+
+}
+
+
+.btn--split:hover
+.btn--split__arrow {
+
+    background:
+        var(--button-blue-hover);
+
+}
+
+
+/* =========================================================
+   17. DROPDOWN BUTTON
+   Reference: Button 11
+========================================================= */
+
+.btn--dropdown {
+
+    justify-content:
+        space-between;
+
+    min-width:
+        185px;
+
+    background:
+        #FFFFFF;
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--dropdown .btn__arrow {
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+    border-right:
+        1.8px solid currentColor;
+
+    border-bottom:
+        1.8px solid currentColor;
+
+    transform:
+        rotate(45deg)
+        translateY(-2px);
+
+}
+
+
+.btn--dropdown:hover {
+
+    background:
+        var(--button-soft-blue);
+
+}
+
+
+/* =========================================================
+   18. ICON + TEXT
+   Reference: Button 12
+========================================================= */
+
+.btn--icon {
+
+    background:
+        var(--button-soft-blue);
+
+    border-color:
+        var(--button-soft-blue);
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--icon .btn__icon {
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--button-blue);
+
+}
+
+
+.btn--icon:hover {
+
+    background:
+        var(--button-soft-blue-hover);
+
+    border-color:
+        var(--button-soft-blue-hover);
+
+}
+
+
+/* =========================================================
+   19. ARROW CTA
+   Reference: Button 13
+========================================================= */
+
+.btn--arrow {
+
+    min-height:
+        auto;
+
+    padding:
+        8px 0;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--arrow .btn__arrow {
+
+    font-size:
+        22px;
+
+    transition:
+        transform var(--button-transition);
+
+}
+
+
+.btn--arrow:hover {
+
+    color:
+        var(--button-blue);
+
+}
+
+
+.btn--arrow:hover .btn__arrow {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =========================================================
+   20. CIRCULAR ARROW
+   Reference: Button 14
+========================================================= */
+
+.btn--circle-arrow {
+
+    gap:
+        14px;
+
+    padding:
+        0 0 0 12px;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--circle-arrow .btn__arrow {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        #DDEEFF;
+
+    color:
+        var(--button-blue);
+
+    font-size:
+        24px;
+
+    transition:
+        background-color var(--button-transition),
+        transform var(--button-transition);
+
+}
+
+
+.btn--circle-arrow:hover
+.btn__arrow {
+
+    background:
+        #CBE7FF;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* =========================================================
+   21. DARK EXECUTIVE
+   Reference: Button 15
+========================================================= */
+
+.btn--executive {
+
+    background:
+        #071F4D;
+
+    border-color:
+        #071F4D;
+
+    color:
+        #FFFFFF;
+
+    box-shadow:
+        0 7px 18px rgba(7, 31, 77, 0.20);
+
+}
+
+
+.btn--executive:hover {
+
+    background:
+        #061A41;
+
+    border-color:
+        #061A41;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   22. WHITE ON DARK
+   Reference: Button 16
+========================================================= */
+
+.btn--white {
+
+    background:
+        #FFFFFF;
+
+    border-color:
+        #FFFFFF;
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--white:hover {
+
+    background:
+        #F4F8FC;
+
+    border-color:
+        #F4F8FC;
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   23. DUAL CTA
+   Reference: Button 17
+========================================================= */
+
+.btn-group {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.btn-group--dual {
+
+    gap:
+        8px;
+
+}
+
+
+/* =========================================================
+   24. CONTACT CTA
+   Reference: Button 18
+========================================================= */
+
+.btn--contact {
+
+    background:
+        var(--button-navy);
+
+    border-color:
+        var(--button-navy);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.btn--contact:hover {
+
+    background:
+        var(--button-navy-hover);
+
+    border-color:
+        var(--button-navy-hover);
+
+}
+
+
+/* =========================================================
+   25. CONSULTATION CTA
+   Reference: Button 19
+========================================================= */
+
+.btn--consultation {
+
+    background:
+        #FFFFFF;
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--consultation .btn__icon {
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--consultation:hover {
+
+    background:
+        var(--button-soft-blue);
+
+}
+
+
+/* =========================================================
+   26. QUOTE CTA
+   Reference: Button 20
+========================================================= */
+
+.btn--quote {
+
+    background:
+        var(--button-blue);
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        #FFFFFF;
+
+    box-shadow:
+        var(--button-shadow-blue);
+
+}
+
+
+.btn--quote:hover {
+
+    background:
+        var(--button-blue-hover);
+
+    border-color:
+        var(--button-blue-hover);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   27. APPLICATION CTA
+   Reference: Button 21
+========================================================= */
+
+.btn--application {
+
+    background:
+        var(--button-navy);
+
+    border-color:
+        var(--button-navy);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.btn--application:hover {
+
+    background:
+        var(--button-navy-hover);
+
+    border-color:
+        var(--button-navy-hover);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   28. LOGIN BUTTON
+   Reference: Button 22
+========================================================= */
+
+.btn--login {
+
+    background:
+        var(--button-soft-blue);
+
+    border-color:
+        var(--button-soft-blue);
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--login .btn__icon {
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--login:hover {
+
+    background:
+        var(--button-soft-blue-hover);
+
+}
+
+
+/* =========================================================
+   29. CLIENT PORTAL
+   Reference: Button 23
+========================================================= */
+
+.btn--portal {
+
+    background:
+        #FFFFFF;
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--portal:hover {
+
+    background:
+        var(--button-soft-blue);
+
+}
+
+
+/* =========================================================
+   30. SECONDARY SOFT
+   Reference: Button 24
+========================================================= */
+
+.btn--secondary {
+
+    background:
+        var(--button-soft-blue);
+
+    border-color:
+        var(--button-soft-blue);
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--secondary:hover {
+
+    background:
+        var(--button-soft-blue-hover);
+
+    border-color:
+        var(--button-soft-blue-hover);
+
+}
+
+
+/* =========================================================
+   31. SUCCESS / SUBMIT
+   Reference: Button 25
+========================================================= */
+
+.btn--submit {
+
+    background:
+        var(--button-blue);
+
+    border-color:
+        var(--button-blue);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.btn--submit:hover {
+
+    background:
+        var(--button-blue-hover);
+
+    border-color:
+        var(--button-blue-hover);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================================
+   32. FULL WIDTH BUTTON
+   Reference: Button 26
+========================================================= */
+
+.btn--full {
+
+    width:
+        100%;
+
+}
+
+
+/* =========================================================
+   33. NAVIGATION CTA
+   Reference: Button 27
+========================================================= */
+
+.btn--navigation {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+}
+
+
+.btn--navigation .btn__divider {
+
+    width:
+        1px;
+
+    height:
+        26px;
+
+    background:
+        rgba(11, 45, 107, 0.22);
+
+}
+
+
+/* =========================================================
+   34. HOVER REVEAL
+   Reference: Button 28
+========================================================= */
+
+.btn--reveal {
+
+    position:
+        relative;
+
+    min-height:
+        auto;
+
+    padding:
+        8px 0 11px;
+
+    border:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--reveal::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        32px;
+
+    height:
+        2px;
+
+    background:
+        var(--button-blue);
+
+    transition:
+        width var(--button-transition);
+
+}
+
+
+.btn--reveal .btn__arrow {
+
+    margin-left:
+        8px;
+
+    font-size:
+        21px;
+
+    opacity:
+        0;
+
+    transform:
+        translateX(-5px);
+
+    transition:
+        opacity var(--button-transition),
+        transform var(--button-transition);
+
+}
+
+
+.btn--reveal:hover {
+
+    color:
+        var(--button-blue);
+
+}
+
+
+.btn--reveal:hover::after {
+
+    width:
+        100%;
+
+}
+
+
+.btn--reveal:hover .btn__arrow {
+
+    opacity:
+        1;
+
+    transform:
+        translateX(0);
+
+}
+
+
+/* =========================================================
+   35. UNDERLINE CTA
+   Reference: Button 29
+========================================================= */
+
+.btn--underline {
+
+    position:
+        relative;
+
+    min-height:
+        auto;
+
+    padding:
+        8px 0 10px;
+
+    border:
+        0;
+
+    border-radius:
+        0;
+
+    background:
+        transparent;
+
+    color:
+        var(--button-navy);
+
+}
+
+
+.btn--underline::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    height:
+        2px;
+
+    background:
+        var(--button-blue);
+
+    transform:
+        scaleX(0.35);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform var(--button-transition);
+
+}
+
+
+.btn--underline:hover {
+
+    color:
+        var(--button-blue);
+
+}
+
+
+.btn--underline:hover::after {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.btn--underline .btn__arrow {
+
+    margin-left:
+        7px;
+
+    font-size:
+        20px;
+
+}
+
+
+/* =========================================================
+   36. DISABLED
+   Reference: Button 30
+========================================================= */
+
+.btn:disabled,
+.btn.is-disabled,
+.btn[aria-disabled="true"] {
+
+    background:
+        #B8C9DB;
+
+    border-color:
+        #B8C9DB;
+
+    color:
+        #FFFFFF;
+
+    cursor:
+        not-allowed;
+
+    pointer-events:
+        none;
+
+    opacity:
+        0.85;
+
+    box-shadow:
+        none;
+
+    transform:
+        none;
+
+}
+
+
+/* =========================================================
+   37. BUTTON SIZES — LARGE
+========================================================= */
+
+.btn--large {
+
+    min-height:
+        var(--button-height-large);
+
+    padding:
+        var(--button-padding-large);
+
+    font-size:
+        var(--button-font-size-large);
+
+}
+
+
+/* =========================================================
+   38. BUTTON SIZES — MEDIUM
+========================================================= */
+
+.btn--medium {
+
+    min-height:
+        var(--button-height-medium);
+
+    padding:
+        var(--button-padding-medium);
+
+    font-size:
+        var(--button-font-size-medium);
+
+}
+
+
+/* =========================================================
+   39. BUTTON SIZES — SMALL
+========================================================= */
+
+.btn--small {
+
+    min-height:
+        var(--button-height-small);
+
+    padding:
+        var(--button-padding-small);
+
+    font-size:
+        var(--button-font-size-small);
+
+}
+
+
+/* =========================================================
+   40. LOADING STATE
+========================================================= */
+
+.btn.is-loading {
+
+    position:
+        relative;
+
+    cursor:
+        wait;
+
+    pointer-events:
+        none;
+
+    color:
+        transparent;
+
+}
+
+
+.btn.is-loading::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        15px;
+
+    height:
+        15px;
+
+    border:
+        2px solid rgba(255, 255, 255, 0.40);
+
+    border-top-color:
+        #FFFFFF;
+
+    border-radius:
+        50%;
+
+    animation:
+        flexen-button-spin 700ms linear infinite;
+
+}
+
+
+@keyframes flexen-button-spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   41. PROCESSING BUTTON
+========================================================= */
+
+.btn--processing {
+
+    background:
+        var(--button-soft-blue);
+
+    border-color:
+        var(--button-soft-blue);
+
+    color:
+        var(--button-navy);
+
+    cursor:
+        wait;
+
+}
+
+
+.btn--processing::before {
+
+    content:
+        "";
+
+    width:
+        15px;
+
+    height:
+        15px;
+
+    border:
+        2px solid rgba(14, 165, 255, 0.22);
+
+    border-top-color:
+        var(--button-blue);
+
+    border-radius:
+        50%;
+
+    animation:
+        flexen-button-spin 700ms linear infinite;
+
+}
+
+
+/* =========================================================
+   42. FOCUS STATE
+========================================================= */
+
+.btn:focus-visible {
+
+    outline:
+        3px solid rgba(14, 165, 255, 0.35);
+
+    outline-offset:
+        3px;
+
+}
+
+
+/* =========================================================
+   43. BUTTON ICON
+========================================================= */
+
+.btn__icon {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex:
+        0 0 auto;
+
+}
+
+
+.btn__icon svg {
+
+    width:
+        18px;
+
+    height:
+        18px;
+
+}
+
+
+/* =========================================================
+   44. BUTTON ARROW
+========================================================= */
+
+.btn__arrow {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex:
+        0 0 auto;
+
+    line-height:
+        1;
+
+}
+
+
+/* =========================================================
+   45. ICON ONLY
+========================================================= */
+
+.btn--icon-only {
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    min-height:
+        44px;
+
+    padding:
+        0;
+
+    border-radius:
+        6px;
+
+}
+
+
+.btn--icon-only.btn--circle {
+
+    border-radius:
+        50%;
+
+}
+
+
+/* =========================================================
+   46. DARK SECTION BUTTON
+========================================================= */
+
+.section--dark .btn--outline,
+.hero--dark .btn--outline {
+
+    border-color:
+        rgba(255, 255, 255, 0.70);
+
+    color:
+        #FFFFFF;
+
+}
+
+
+.section--dark .btn--outline:hover,
+.hero--dark .btn--outline:hover {
+
+    background:
+        rgba(255, 255, 255, 0.10);
+
+    border-color:
+        #FFFFFF;
+
+}
+
+
+/* =========================================================
+   47. BUTTON GROUP
+========================================================= */
+
+.button-group {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.button-group--center {
+
+    justify-content:
+        center;
+
+}
+
+
+.button-group--start {
+
+    justify-content:
+        flex-start;
+
+}
+
+
+.button-group--end {
+
+    justify-content:
+        flex-end;
+
+}
+
+
+/* =========================================================
+   48. HERO CTA GROUP
+========================================================= */
+
+.hero__actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+/* =========================================================
+   49. MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .btn {
+
+        min-height:
+            44px;
+
+    }
+
+
+    .btn--large {
+
+        min-height:
+            48px;
+
+    }
+
+
+    .button-group,
+    .hero__actions {
+
+        width:
+            100%;
+
+    }
+
+
+    .button-group .btn,
+    .hero__actions .btn {
+
+        flex:
+            0 1 auto;
+
+    }
+
+
+    .btn--full-mobile {
+
+        width:
+            100%;
+
+    }
+
+
+    .btn--circle-arrow .btn__arrow {
+
+        width:
+            50px;
+
+        height:
+            50px;
+
+    }
+
+}
+
+
+/* =========================================================
+   50. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .button-group,
+    .hero__actions {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+    }
+
+
+    .button-group .btn,
+    .hero__actions .btn {
+
+        width:
+            100%;
+
+    }
+
+
+    .btn--text,
+    .btn--arrow,
+    .btn--reveal,
+    .btn--underline {
+
+        width:
+            auto !important;
+
+        align-self:
+            flex-start;
+
+    }
+
+}
+
+
+/* =========================================================
+   51. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn,
+    .btn *,
+    .btn::before,
+    .btn::after {
+
+        transition:
+            none !important;
+
+        animation:
+            none !important;
+
+    }
+
+}
